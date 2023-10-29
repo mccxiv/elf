@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxql3wxjqqw1c"]
+[gd_scene load_steps=8 format=3 uid="uid://dxql3wxjqqw1c"]
 
-[ext_resource type="MeshLibrary" uid="uid://j0jd1jqont0g" path="res://prefabs/mesh_lib.tres" id="2_5728f"]
 [ext_resource type="PackedScene" uid="uid://8ylikwo31013" path="res://prefabs/terrain.tscn" id="2_jknoy"]
 [ext_resource type="Script" path="res://Player.gd" id="3_bo455"]
 
@@ -23,15 +22,6 @@ ambient_light_color = Color(1, 1, 1, 1)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c6op2"]
 
 [node name="Node3D" type="Node3D"]
-
-[node name="GridMap" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-mesh_library = ExtResource("2_5728f")
-cell_size = Vector3(1, 1, 1)
-data = {
-"cells": PackedInt32Array(65535, 0, 0, 0, 0, 0, 0, 65535, 0, 65534, 0, 0, 65535, 65535, 0, 65533, 65535, 0, 65534, 65535, 0, 65535, 65534, 0, 65534, 65534, 0, 65533, 65534, 0, 65532, 65534, 0, 0, 65534, 0, 1, 65534, 0, 2, 65534, 0, 3, 65535, 0, 2, 65535, 0, 1, 65535, 0, 65536, 65535, 0, 2, 0, 0, 1, 0, 0)
-}
-metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="terrain" parent="." instance=ExtResource("2_jknoy")]
 
