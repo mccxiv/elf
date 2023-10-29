@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b28qr0mjcd05e"]
+
+[ext_resource type="PackedScene" uid="uid://yybb5vq4gymc" path="res://assets/outdoor-1.gltf" id="1_devf5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ks0ka"]
+
+[node name="outdoor-1" instance=ExtResource("1_devf5")]
+
+[node name="cube" parent="Node2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node2/cube" index="0"]
+shape = SubResource("BoxShape3D_ks0ka")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi4q41hl4skbr"]
+
+[ext_resource type="PackedScene" uid="uid://b28qr0mjcd05e" path="res://prefabs/outdoor_1.tscn" id="1_kj1ib"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ee2xm"]
+
+[node name="grass_on_rock" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="outdoor-1" parent="StaticBody3D" instance=ExtResource("1_kj1ib")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+shape = SubResource("BoxShape3D_ee2xm")
