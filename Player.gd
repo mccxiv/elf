@@ -3,13 +3,19 @@ extends CharacterBody3D
 const SPEED = 2.0
 const JUMP_VELOCITY = 2.5
 const ACCELERATION = SPEED * 4 
-const DECELERATION = SPEED * 2 
+const DECELERATION = SPEED * 3 
 const MOUSE_SENSITIVITY = 0.0035
+const BOB_FREQUENCY = 20.0
+const BOB_AMPLITUDE = 0.03
 @onready var neck := $neck
 @onready var camera := $neck/Camera3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+# Variables for head bobbing.
+var bob_timer = 0.0
+var bob_offset = 0.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -48,5 +54,16 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, DECELERATION * delta)
 		velocity.z = move_toward(velocity.z, 0, DECELERATION * delta)
+
+	# Handle head bobbing.
+	if direction and is_on_floor():
+		bob_timer += delta * BOB_FREQUENCY
+		bob_offset = sin(bob_timer) * BOB_AMPLITUDE
+	else:
+		bob_timer = 0.0
+		bob_offset = 0.0
+
+	# Apply head bobbing to camera.
+	camera.transform.origin.y = bob_offset
 
 	move_and_slide()
