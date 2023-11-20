@@ -7,9 +7,9 @@ const DECELERATION = SPEED * 3
 const MOUSE_SENSITIVITY = 0.0035
 const BOB_FREQUENCY = 20.0
 const BOB_AMPLITUDE = 0.03
-const TILT_ANGLE = 10.0
-@onready var neck := $neck
-@onready var camera := $neck/Camera3D
+const TILT_ANGLE = -3.0
+@onready var neck := $Neck
+@onready var camera := $Neck/Camera3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -53,8 +53,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, direction.x * SPEED, ACCELERATION * delta)
 		velocity.z = move_toward(velocity.z, direction.z * SPEED, ACCELERATION * delta)
 		# Tilt the camera in the direction of movement only for the z axis.
-		var tilt_angle = direction.z * TILT_ANGLE
-		neck.rotation.z = deg_to_rad(tilt_angle)
+		# var tilt_angle = direction.z * TILT_ANGLE
+		# neck.rotation.z = deg_to_rad(tilt_angle)
 	else:
 		velocity.x = move_toward(velocity.x, 0, DECELERATION * delta)
 		velocity.z = move_toward(velocity.z, 0, DECELERATION * delta)
