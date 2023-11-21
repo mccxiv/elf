@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu864dlsod2rb"]
+
+[ext_resource type="Texture2D" uid="uid://dsuppvbxxgyud" path="res://assets/rock-billboard.png" id="1_6c5cu"]
+
+[node name="Rock" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+pixel_size = 0.0313
+billboard = 2
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_6c5cu")
