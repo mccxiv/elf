@@ -1,11 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxiis4mrmnkf7"]
+[gd_scene load_steps=4 format=3 uid="uid://kc63gi3mbluw"]
 
 [ext_resource type="Texture2D" uid="uid://tgxvw75dwyqx" path="res://assets/grass-billboard.png" id="1_8xrkp"]
+[ext_resource type="Shader" path="res://shaders/sway.gdshader" id="1_likgd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jm6qi"]
+render_priority = 0
+shader = ExtResource("1_likgd")
+shader_parameter/grass_texture = ExtResource("1_8xrkp")
 
 [node name="Grass" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = SubResource("ShaderMaterial_jm6qi")
 pixel_size = 0.0313
 billboard = 2
 shaded = true

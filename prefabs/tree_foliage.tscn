@@ -1,11 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8bkxqif6pu21"]
+[gd_scene load_steps=6 format=3 uid="uid://c8bkxqif6pu21"]
 
 [ext_resource type="Texture2D" uid="uid://bngkv67wvbolc" path="res://assets/foliage.png" id="1_0qvh0"]
+[ext_resource type="Shader" path="res://shaders/tree_sway.gdshader" id="1_wqp8i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p5q5v"]
+render_priority = 0
+shader = ExtResource("1_wqp8i")
+shader_parameter/texture = ExtResource("1_0qvh0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8hdce"]
+render_priority = 0
+shader = ExtResource("1_wqp8i")
+shader_parameter/texture = ExtResource("1_0qvh0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2k3t6"]
+render_priority = 0
+shader = ExtResource("1_wqp8i")
+shader_parameter/texture = ExtResource("1_0qvh0")
 
 [node name="Foliage" type="Node3D"]
 
 [node name="Foliage1" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.921359, 0)
+material_override = SubResource("ShaderMaterial_p5q5v")
 pixel_size = 0.0313
 shaded = true
 alpha_cut = 2
@@ -14,6 +31,7 @@ texture = ExtResource("1_0qvh0")
 
 [node name="Foliage2" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.347513, 0.414963, 0.00743699)
+material_override = SubResource("ShaderMaterial_8hdce")
 pixel_size = 0.0313
 shaded = true
 alpha_cut = 2
@@ -22,6 +40,7 @@ texture = ExtResource("1_0qvh0")
 
 [node name="Foliage3" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.302487, 0.414963, 0.0280899)
+material_override = SubResource("ShaderMaterial_2k3t6")
 pixel_size = 0.0313
 shaded = true
 alpha_cut = 2
