@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://brxriqcoabars"]
+
+[ext_resource type="Texture2D" uid="uid://bngkv67wvbolc" path="res://assets/foliage.png" id="1_fuk4g"]
+
+[node name="Shrub" type="Node3D"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+pixel_size = 0.0313
+billboard = 2
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_fuk4g")
