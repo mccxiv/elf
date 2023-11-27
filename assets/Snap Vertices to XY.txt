@@ -1,0 +1,20 @@
+import bpy
+import math
+
+# Get the active object
+obj = bpy.context.active_object
+
+# Ensure the object is in edit mode
+bpy.ops.object.mode_set(mode='EDIT')
+
+# Get the selected vertices
+bpy.ops.object.mode_set(mode='OBJECT')
+selected_verts = [v for v in obj.data.vertices if v.select]
+
+# Snap each vertex to the nearest grid point
+for v in selected_verts:
+    v.co.x = round(v.co.x)
+    v.co.y = round(v.co.y)
+
+# Return to edit mode
+bpy.ops.object.mode_set(mode='EDIT')

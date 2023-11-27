@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqeqog3ooquvo"]
+
+[ext_resource type="PackedScene" uid="uid://c1fseo5fs2n0j" path="res://assets/delver-study-tarraining.blend" id="1_sbt8h"]
+
+[node name="delver-study-tarraining" instance=ExtResource("1_sbt8h")]
