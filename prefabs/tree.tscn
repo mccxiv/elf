@@ -22,6 +22,7 @@ texture_filter = 0
 texture = ExtResource("1_4pruq")
 
 [node name="Quarter" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.431298, 0)
 
 [node name="Foliage" parent="Quarter" instance=ExtResource("2_pg8ay")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1.4, 0)
@@ -55,7 +56,7 @@ spot_range = 792.21
 spot_angle = 41.77
 
 [node name="Quarter2" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.431298, 0)
 
 [node name="Foliage" parent="Quarter2" instance=ExtResource("2_pg8ay")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1.4, 0)
@@ -81,7 +82,7 @@ omni_range = 6.0
 omni_attenuation = 2.44591
 
 [node name="Quarter3" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.431298, 0)
 
 [node name="Foliage" parent="Quarter3" instance=ExtResource("2_pg8ay")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1.4, 0)
@@ -107,7 +108,7 @@ omni_range = 6.0
 omni_attenuation = 2.44591
 
 [node name="Quarter4" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.431298, 0)
 
 [node name="Foliage" parent="Quarter4" instance=ExtResource("2_pg8ay")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1.4, 0)
